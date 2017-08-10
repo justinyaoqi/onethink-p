@@ -1,0 +1,51 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>报修详情</h2>
+    </div>
+
+
+
+
+
+
+        <volist name="list" id="pro">
+
+
+                报修单号：{$pro.sn}<br>
+                报修人：{$pro.name}<br>
+                电话：{$pro.tel}<br>
+                地址：{$pro.address}<br>
+                问题：{$pro.title}<br>
+                报修时间：{$pro.time}<br>
+                说明：{$pro.content}
+
+        </volist>
+
+
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        $(function() {
+            //点击排序
+            $('.list_sort').click(function(){
+                var url = $(this).attr('url');
+                var ids = $('.ids:checked');
+                var param = '';
+                if(ids.length > 0){
+                    var str = new Array();
+                    ids.each(function(){
+                        str.push($(this).val());
+                    });
+                    param = str.join(',');
+                }
+
+                if(url != undefined && url != ''){
+                    window.location.href = url + '/ids/' + param;
+                }
+            });
+        });
+    </script>
+</block>

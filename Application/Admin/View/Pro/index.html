@@ -1,0 +1,81 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>报修管理</h2>
+    </div>
+
+    <div class="cf">
+        <a class="btn" href="{:U('add','pid='.$pid)}">新 增</a>
+        <a class="btn" href="javascript:;">删 除</a>
+    </div>
+
+    <div class="data-table table-striped">
+        <table>
+            <thead>
+            <tr>
+
+                </th>
+                <th>报修单号</th>
+                <th>报修人</th>
+                <th>电话</th>
+                <th>地址</th>
+                <th>问题</th>
+                <th>报修时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="list">
+                <volist name="list" id="pro">
+                    <tr>
+                        <td>{$pro.sn}</td>
+                        <td>{$pro.name}</td>
+                        <td>{$pro.tel}</td>
+                        <td>{$pro.address}</td>
+                        <td>{$pro.title}</td>
+                        <td><?php echo (date("Y-m-d H:i:s",$pro['time'])); ?></td>
+                        <td><?php if($pro['status']==0){echo '未处理';}
+if($pro['status']==1){echo '处理中';}
+if($pro['status']==2){echo '处理完成';}?></td>
+                        <td>
+                        <a  class="<?php echo($pro['status']==2?'':'btn');?>" href="{:U('change?id='.$pro['id'])}"><?php if($pro['status']==0){echo '处理';}
+if($pro['status']==1){echo '处理完成';}
+?></a>
+                        <a href="{:U('detail?id='.$pro['id'])}">查看详情</a>
+                        <a class="confirm ajax-get" title="删除" href="{:U('del?id='.$pro['id'])}">删除</a>
+                    </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        $(function() {
+            //点击排序
+            $('.list_sort').click(function(){
+                var url = $(this).attr('url');
+                var ids = $('.ids:checked');
+                var param = '';
+                if(ids.length > 0){
+                    var str = new Array();
+                    ids.each(function(){
+                        str.push($(this).val());
+                    });
+                    param = str.join(',');
+                }
+
+                if(url != undefined && url != ''){
+                    window.location.href = url + '/ids/' + param;
+                }
+            });
+        });
+    </script>
+</block>
