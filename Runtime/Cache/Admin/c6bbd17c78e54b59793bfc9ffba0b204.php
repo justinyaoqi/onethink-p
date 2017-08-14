@@ -119,7 +119,7 @@
 		<div class="form-item">
 			<label class="item-label">内容</label>
 			<div class="controls">
-				<input type="text" class="textarea input-large" name="content" value="<?php echo ((isset($info["url"]) && ($info["url"] !== ""))?($info["url"]):''); ?>">
+				<textarea name="content" rows='10' cols='60' ><?php echo ((isset($info["url"]) && ($info["url"] !== ""))?($info["url"]):''); ?></textarea>
 			</div>
 		</div>
 		<div class="form-item">

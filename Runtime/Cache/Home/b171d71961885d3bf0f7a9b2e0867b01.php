@@ -23,13 +23,13 @@
 <div class="container">
     <h1>;)请登录</h1>
     <div class="signin">
-        <form class="login-form" action="/index.php?s=/Home/User/login.html" method="post">
-            <input type="text" id="inputEmail" class="user" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'rachelgreen';}" />
-            <input type="password" id="inputPassword"  class="pass" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
+        <form class="login-form" action="/Home/User/login" method="post">
+            <input type="text" id="inputEmail" class="user" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
+            <input type="password" id="inputPassword"  class="pass" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
             <div class="control-group">
                 <label class="control-label" for="inputPassword">验证码</label>
                 <div class="controls">
-                    <input type="text" id="inputPassword" class="span3" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
+                    <input type="text" id="inputPassword" class="user" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
                 </div><br>
             </div>
             <div class="control-group">
@@ -40,14 +40,14 @@
                 <div class="controls Validform_checktip text-warning"></div>
             </div>
             <label>
-                <input type="checkbox" value="Remember-Me" /> 自动登录?
+                <input type="checkbox"  /> 自动登录?
             </label>
             <input type="submit" value="登录" />
         </form>
     </div>
 </div>
 <div class="footer">
-    <p>Copyright &copy; 2015 Lucid Login Form. All Rights Reserved | Design by <a href="http://xmoban.cn">xmoban.cn</a></p>
+    <p>Copyright &copy; 2015 Lucid Login Form. All Rights Reserved   </p>
 </div>
 
 <script type="text/javascript">

@@ -34,15 +34,20 @@ class ArticleController extends HomeController {
 		$category = $this->category();
 
 		/* 获取当前分类列表 */
-		$Document = D('Document');
-		$list = $Document->page($p, $category['list_row'])->lists($category['id']);
-		if(false === $list){
-			$this->error('获取列表数据失败！');
-		}
+		$Document = D('Document')->where([$category=>'category_id'])->join('onethink_picture on onethink_document.cover_id=onethink_picture.id')->select();
+
+
+		//	$list = $Document->page($p, $category['list_row'])->lists($category['id']);
+
+
+//				if(false === $list){
+//			$this->error('获取列表数据失败！');
+//		}
 
 		/* 模板赋值并渲染模板 */
 		$this->assign('category', $category);
-		$this->assign('list', $list);
+		$this->assign('list', $Document);
+
 		$this->display($category['template_lists']);
 	}
 

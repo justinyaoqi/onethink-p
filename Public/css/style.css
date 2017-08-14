@@ -86,6 +86,20 @@ input.user {
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
+
+input.captcha {
+	width: 83%;
+	padding: 10px 10px 10px 45px;
+	background: rgba(23, 24, 25, 0.29)  no-repeat 10px 10px;
+	border: 1px solid #7B7474;
+	border-radius: 5px;
+	font-family: Oswald-Light;
+	font-size: 18px;
+	color: #FFF;
+	outline: none;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+}
 input.pass {
     width: 83%;
     padding: 10px 10px 10px 45px;
@@ -158,6 +172,9 @@ input[type="submit"]:hover {
 	input.pass {
     	width: 87%;
 	}
+	input.captcha {
+		width: 87%;
+	}
 }
 
 @media screen and (max-width: 1680px) {
@@ -167,6 +184,9 @@ input[type="submit"]:hover {
 	input.pass {
 	    width: 85%;
 	}
+	input.captcha {
+		width: 85%;
+	}
 }
 
 @media screen and (max-width: 1600px) {
@@ -175,6 +195,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
     	width: 84%;
+	}
+	input.captcha {
+		width: 84%;
 	}
 }
 
@@ -190,6 +213,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
     	width: 83.5%;
+	}
+	input.captcha {
+		width: 83.5%;
 	}
 }
 
@@ -209,6 +235,9 @@ input[type="submit"]:hover {
 	input.pass {
 	    width: 84%;
 	}
+	input.captcha {
+		width: 84%;
+	}
 }
 
 @media screen and (max-width: 1080px) {
@@ -218,6 +247,9 @@ input[type="submit"]:hover {
 	input.pass {
     	width: 82.5%;
 	}
+	input.captcha {
+		width: 82.5%;
+	}
 }
 
 @media screen and (max-width: 1050px) {
@@ -226,6 +258,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
     	width: 81.5%;
+	}
+	input.captcha {
+		width: 81.5%;
 	}
 }
 
@@ -272,6 +307,9 @@ input[type="submit"]:hover {
 	input.pass {
     	width: 81%;
 	}
+	input.captcha {
+		width: 81%;
+	}
 }
 
 @media screen and (max-width: 736px) {
@@ -292,6 +330,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
 	    width: 80%;
+	}
+	input.captcha {
+		width: 80%;
 	}
 }
 
@@ -352,6 +393,12 @@ input[type="submit"]:hover {
 	    font-size: 17px;
         background: rgba(23, 24, 25, 0.29) url("../images/pass.png") no-repeat 10px 6px;
 	}
+	input.captcha {
+		width: 82%;
+		padding: 7px 10px 7px 45px;
+		font-size: 17px;
+		background: rgba(23, 24, 25, 0.29)  no-repeat 10px 6px;
+	}
 	input[type="submit"] {
     	padding: 7px 0;
 	}
@@ -372,6 +419,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
 	    width: 79%;
+	}
+	input.captcha {
+		width: 79%;
 	}
 }
 
@@ -395,6 +445,12 @@ input[type="submit"]:hover {
         font-size: 16px;
         background: rgba(23, 24, 25, 0.29) url("../images/pass.png") no-repeat 10px 6px;
 	}
+	input.captcha {
+		width: 79%;
+		padding: 7px 10px 7px 45px;
+		font-size: 16px;
+		background: rgba(23, 24, 25, 0.29)  no-repeat 10px 6px;
+	}
 	input[type="submit"] {
     	padding: 7px 0;
 	}
@@ -412,6 +468,9 @@ input[type="submit"]:hover {
 	}
 	input.pass {
 	    width: 78%;
+	}
+	input.captcha {
+		width: 78%;
 	}
 }
 
@@ -436,6 +495,12 @@ input[type="submit"]:hover {
 	    padding: 7px 10px 7px 45px;
 	    font-size: 16px;
 	    background: rgba(23, 24, 25, 0.29) url("../images/pass.png") no-repeat 10px 6px;
+	}
+	input.captcha {
+		width: 76.5%;
+		padding: 7px 10px 7px 45px;
+		font-size: 16px;
+		background: rgba(23, 24, 25, 0.29) no-repeat 10px 6px;
 	}
 	input[type="submit"] {
 	    padding: 7px 0;
